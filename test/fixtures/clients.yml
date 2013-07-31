@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  avatar: 
+  typeID: 
+  numID: 
+  name: 
+  birth: 
+  sex: 
+  country: 
+  departament: 
+  city: MyString
+
+two:
+  avatar: 
+  typeID: 
+  numID: 
+  name: 
+  birth: 
+  sex: 
+  country: 
+  departament: 
+  city: MyString

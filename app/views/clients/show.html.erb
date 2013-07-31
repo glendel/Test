@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Avatar:</b>
+  <%= @client.avatar %>
+</p>
+
+<p>
+  <b>Typeid:</b>
+  <%= @client.typeID %>
+</p>
+
+<p>
+  <b>Numid:</b>
+  <%= @client.numID %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @client.name %>
+</p>
+
+<p>
+  <b>Birth:</b>
+  <%= @client.birth %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @client.sex %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @client.country %>
+</p>
+
+<p>
+  <b>Departament:</b>
+  <%= @client.departament %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @client.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>
