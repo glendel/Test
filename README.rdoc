@@ -1,35 +1,35 @@
 == Glosario
 
-1. Lenguaje Ruby: Es lenguaje de programación orientado objetos, muy potente, es 
+1.  Lenguaje Ruby: Es lenguaje de programación orientado objetos, muy potente, es 
 		interpretado y se distribuye bajo licencia de software libre.
 
-2. Framework: Es un marco de trabajo, es decir un conjunto de lineamientos, 
+2.  Framework: Es un marco de trabajo, es decir un conjunto de lineamientos, 
 		criterios y metodos para trabajar con un tipo de problema en 
 		particular.
 
-3. Rails Framework: Es un marco de trabajo, que permite la creacion de robustas 
+3.  Rails Framework: Es un marco de trabajo, que permite la creacion de robustas 
 		aplicaciones web, siguiendo el paradigma de la arquitectura (MVC). Tiene 
 		como principios fundamentales "No te repitas y Convencion sobre configuracion."
 
-4. JQuery Framework: Es un marco de trabajo de JavaScript que permite interatuar 
+4.  JQuery Framework: Es un marco de trabajo de JavaScript que permite interatuar 
 		de una forma mas sencilla con los documentos HTML. Permitiendo agregar, 
 		manipular, eliminar y crear elementos, eventos, animaciones y mucho mas.
 		
-5. Sistema de Autenticacion: Es un sistema de seguridad que permite validar la 
+5.  Sistema de Autenticacion: Es un sistema de seguridad que permite validar la 
 		identidad de los individuos y objetos que pretenden realizar alguna, 
 		determinada accion.
 		
-6. Sistema de Autorizacion: Es un sistema de seguridad que permite brindar o 
+6.  Sistema de Autorizacion: Es un sistema de seguridad que permite brindar o 
 		restringir privilegios a determinados lugares o determinadas funciones.
 		
-7. Avatar (Graphical Representation of a User): Es una representacion grafica
+7.  Avatar (Graphical Representation of a User): Es una representacion grafica
 		de una persona u objeto, usada generalmente en la web.
 		
-8. Sistema de Versionado(Git, Subversion): Es un software para el manejo de versiones 
+8.  Sistema de Versionado(Git, Subversion): Es un software para el manejo de versiones 
 		en archivos de todo tipo, permitiendo capturar un historico de sus cambios o 
 		evolucion en el tiempo. Cada subversion representa un nuevo cambio en el archivo.
 		
-9. Repositorio (Manejo de Versiones): Es un espacio digital que almacena y registra todos 
+9.  Repositorio (Manejo de Versiones): Es un espacio digital que almacena y registra todos 
 		los archivos y cambios a los mismos, permitiendo compartirse y ser modificados 
 		paralelamente por multiples usuarios.
 		
