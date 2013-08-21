@@ -43,3 +43,8 @@ gem "bson_ext", "~> 1.9.1"
 gem "carrierwave"
 gem "devise"
 gem "carrierwave-mongoid"
+#gem 'will_paginate', '~> 3.0'
+gem "will_paginate_mongoid"
+#gem 'sunspot_rails'
+#gem 'sunspot_solr'
+gem "kaminari", "~> 0.14.1"
