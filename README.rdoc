@@ -15,27 +15,27 @@
 		de una forma mas sencilla con los documentos HTML. Permitiendo agregar, 
 		manipular, eliminar y crear elementos, eventos, animaciones y mucho mas.
 		
-5.  Sistema de Autenticacion: Es un sistema de seguridad que permite validar la 
+5.   Sistema de Autenticacion: Es un sistema de seguridad que permite validar la 
 		identidad de los individuos y objetos que pretenden realizar alguna, 
 		determinada accion.
 		
-6.  Sistema de Autorizacion: Es un sistema de seguridad que permite brindar o 
+6.   Sistema de Autorizacion: Es un sistema de seguridad que permite brindar o 
 		restringir privilegios a determinados lugares o determinadas funciones.
 		
-7.  Avatar (Graphical Representation of a User): Es una representacion grafica
+7.   Avatar (Graphical Representation of a Useghfjfjr): Es una representacion grafica
 		de una persona u objeto, usada generalmente en la web.
 		
-8.  Sistema de Versionado(Git, Subversion): Es un software para el manejo de versiones 
+8.   Sistema de Versionado(Git, Subversion): Es un software para el manejo de versiones 
 		en archivos de todo tipo, permitiendo capturar un historico de sus cambios o 
 		evolucion en el tiempo. Cada subversion representa un nuevo cambio en el archivo.
 		
-9.  Repositorio (Manejo de Versiones): Es un espacio digital que almacena y registra todos 
+9.   Repositorio (Manejo de Versiones): Es un espacio digital que almacena y registra todos 
 		los archivos y cambios a los mismos, permitiendo compartirse y ser modificados 
 		paralelamente por multiples usuarios.
 		
-10. Combos Dependientes: Son listas desplegables que contienen series especificas de datos.
+10.  Combos Dependientes: Son listas desplegables que contienen series especificas de datos.
 
-11. AJAX: Es una tecnica de desarrollo web que permite realizar modificaciones a paginas
+11.  AJAX: Es una tecnica de desarrollo web que permite realizar modificaciones a paginas
 		web sin la necesidad de recargarlas.
 
 == by Jeisson Rosas
