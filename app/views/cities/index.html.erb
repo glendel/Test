@@ -1,0 +1,14 @@
+<h1>Listing cities</h1>
+
+<label for="fil_text">Search:</label>&nbsp;
+<input type="text" id="fil_text" name="fil_text" size="40" placeholder="name" 
+       onkeyup="updateLists( '#city-list', '<%= cities_path( { :format => :html } ) -%>', { remote : true, dataType : 'html', data : { filter : this.value } } );" />
+
+<br/><br/>
+
+<div id="city-list">
+  <%= render( {:partial => 'cities'} ) -%>
+</div>
+<br />
+
+<%= link_to 'New City', new_city_path %>

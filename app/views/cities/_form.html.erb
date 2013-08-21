@@ -1,0 +1,33 @@
+<%= form_for(@city) do |f| %>
+  <% if @city.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@city.errors.count, "error") %> prohibited this city from being saved:</h2>
+
+      <ul>
+      <% @city.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.number_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :depart_id, 'Departament' %><br />
+    <%= f.select :depart_id, Departament.all.order_by(['name', 1]).map{|c| [c.name, c.code]} %>
+  </div>
+  <div class="field">
+    <%= f.label :cap, '¿Is a Capital?' %><br />
+    <%= check_box_tag(:cap, 1, (:cap === 1 ? true : false)) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<%- if ( params[ :type ] && params[ :type ] == 'div' ) -%>
+  <div>
+    <label>Name :</label> <%= client.name -%><br />
+    <label>Birth :</label> <%= client.birth -%><br />
+    <label>Sex :</label> <%= client.sex -%>
+  </div>
+<%- elsif ( params[ :type ] && params[ :type ] == 'ul' ) -%>
+  <li>
+    <label>Name :</label> <%= client.name -%><br />
+    <label>Birth :</label> <%= client.birth -%><br />
+    <label>Sex :</label> <%= client.sex -%>
+  </li>
+<%- elsif ( params[ :type ] && params[ :type ] == 'select' ) -%>
+  <option value="<%= client.id -%>"><%#= client.name -%></option>
+<%- else -%>
+  <%= raw( printRow( client, [ 'typeID', 'numID', 'name', 'birth', 'sex', 'country', 'departament', 'city' ] ) ) -%>
+<%- end -%>
+

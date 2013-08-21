@@ -1,40 +1,13 @@
 <h1>Listing clients</h1>
 
-<label for="filtro">Search:</label>&nbsp;<input type="text" class="f_txt" size="40" placeholder="Keyword"/><br/>
-<table class="ta_clients">
-  <tr>
-    <th>Avatar</th>
-    <th>Typeid</th>
-    <th>Numid</th>
-    <th>Name</th>
-    <th>Birth</th>
-    <th>Sex</th>
-    <th>Country</th>
-    <th>Departament</th>
-    <th>City</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @clients.each do |client| %>
-  <tr>
-    <td><img src="<%= client.avatar %>" alt="Avatar"/></td>
-    <td><%= client.typeID %></td>
-    <td><%= client.numID %></td>
-    <td><%= client.name %></td>
-    <td><%= client.birth %></td>
-    <td><%= client.sex %></td>
-    <td><%= Country.find_by(code: client.country).name %></td>
-    <td><%= client.departament %></td>
-    <td><%= client.city %></td>
-    <td><%= link_to 'Show', client %></td>
-    <td><%= link_to 'Edit', edit_client_path(client) %></td>
-    <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
+<label for="filtro">Search:</label>&nbsp;<input type="text" class="f_txt" size="40" placeholder="Keyword"/>
+<button onClick="updateLists( '#client-list', '<%= clients_path( { :type => 'html' } ) -%>' );">Update Clients HTML</button>
+<button onClick="updateLists( '#client-list', '<%= clients_path( { :format => :json } ) -%>', { remote : true, dataType : 'json' } );">Update Clients JSON</button>
+<button onClick="updateLists( '#client-list', '<%= clients_path( { :format => :xml } ) -%>', { remote : true, dataType : 'xml' } );">Update Clients XML</button>
+<button onClick="updateLists( '#client-list', '<%= clients_path( { :format => :js } ) -%>', { remote : true, dataType : 'script' } );">Update Clients JS</button>
+<br/>
+<%= render( { :partial => 'clients' } ) -%>
 <br />
+<%#= render js: "alert('Hello Rails');" %>
 
 <%= link_to 'New Client', new_client_path %>

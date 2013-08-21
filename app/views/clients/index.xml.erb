@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clients type="array">
+<%-
+  @clients.each do |client|
+-%>
+  <client>
+    <id><%= client.id -%></id>
+    <avatar><%= client.avatar -%></avatar>
+    <birth><%= client.birth -%></birth>
+    <city><%= client.city -%></city>
+    <country><%= Country.find_by( { :code => client.country } ).name.to_s -%></country>
+    <departament><%= client.departament -%></departament>
+    <name><%= client.name -%></name>
+    <numID type="integer"><%= client.numID -%></numID>
+    <sex><%= client.sex -%></sex>
+    <typeID><%= client.typeID -%></typeID>
+  </client>
+<%- end -%>
+</clients>

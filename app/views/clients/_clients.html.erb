@@ -1,0 +1,42 @@
+<!--
+<%#- if ( params[ :type ] && params[ :type ] == 'div' ) -%>
+  Este es el listado de Clientes con DIVS
+  <%#= render( @clients ) -%>
+<%#- elsif ( params[ :type ] && params[ :type ] == 'ul' ) -%>
+  <ul>
+    <%#= render( @clients ) -%>
+  </ul>
+<%#- elsif ( params[ :type ] && params[ :type ] == 'select' ) -%>
+  <select>
+    <%#= render( @clients ) -%>
+  </select>
+<%#- else -%>
+-->
+  <div class="digg_pagination">
+    <div class="page_info">
+      <%#= page_entries_info @clients %>
+    </div>
+<table id="client-list" class="ta_clients">
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Typeid</th>
+      <th>Numid</th>
+      <th>Name</th>
+      <th>Birth</th>
+      <th>Sex</th>
+      <th>Country</th>
+      <th>Departament</th>
+      <th>City</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render( @clients ) -%>
+  </tbody>
+</table>
+  <%= will_paginate @clients, :container => false %>
+  </div>
+<%#- end -%>

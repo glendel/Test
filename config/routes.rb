@@ -1,7 +1,17 @@
 Test::Application.routes.draw do
+  resources :departaments
+
+
+  resources :cities
+
+
+  resources :countries
+
+
   devise_for :users
 
   resources :clients
+  #resources :countries
 
 
   # The priority is based upon order of creation:

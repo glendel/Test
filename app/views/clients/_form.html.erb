@@ -37,15 +37,17 @@
   </div>
   <div class="field">
     <%= f.label :country %><br />
-    <%= f.select :country, Country.all.map{|c| [c.name, c.code]} %>
+    <%= f.select :country, Country.all.order_by(['name', 1]).map{|c| [c.name, c.code]} %>
   </div>
   <div class="field">
     <%= f.label :departament %><br />
-    <%= f.text_field :departament %>
+    <%= f.select :departament, Departament.all.order_by(['name', 1]).map{|c| [c.name, c.code]}, {}, 
+      { :onchange => "updateLists( '#client_city', '" + cities_path( { :format => :html } ) + "', { remote : true, dataType : 'html', data : { type: 'select', depart_id: this.value } } );" } %>
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= f.select :city, 
+      City.where(depart_id: Departament.all.order_by(["name", 1]).first.code).order_by(['cap', 1], ['name', 1]).map{|c| [c.name, c.code]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

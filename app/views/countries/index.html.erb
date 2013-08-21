@@ -1,0 +1,15 @@
+<h1>Listing countries</h1>
+
+<label for="fil_text">Search:</label>&nbsp;
+<input type="text" id="fil_text" name="fil_text" size="40" placeholder="name" 
+       onkeyup="updateLists( '#country-list', '<%= countries_path( { :format => :html } ) -%>', { remote : true, dataType : 'html', data : { filter: this.value } } );" />
+
+<br/><br/>
+
+<div id="country-list">
+  <%= render( {:partial => 'countries'} ) -%>
+</div>
+
+<br />
+
+<%= link_to 'New Country', new_country_path %>

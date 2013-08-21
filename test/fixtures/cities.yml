@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: 1
+  name: MyString
+  depart_id: 1
+  cap: 1
+
+two:
+  code: 1
+  name: MyString
+  depart_id: 1
+  cap: 1

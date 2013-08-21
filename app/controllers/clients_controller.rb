@@ -1,14 +1,23 @@
 class ClientsController < ApplicationController
   before_filter :authenticate_user!
-
+  
   # GET /clients
   # GET /clients.json
   def index
-    @clients = Client.all
+    #@clients = Client.all.order_by(["name", 1]).paginate(:page => params[:page], :per_page => 12)
+    @clients = Client.all_filtered_by_params( params )
 
     respond_to do |format|
-      format.html # index.html.erb
+  #    format.html { render ( 'users/index' ) }# index.html.erb
+      format.html {# index.html.erb
+        if ( request.xhr? )
+          render( :partial => 'clients' )
+          return
+        end
+      }
+      format.js# { render js: "alert('Hello Rails');" }
       format.json { render json: @clients }
+      format.xml# { render xml: @clients }
     end
   end
 
@@ -43,9 +52,13 @@ class ClientsController < ApplicationController
   # POST /clients.json
   def create
     @client = Client.new(params[:client])
-    @client.avatar = params[:file]
+    @client.avatar = params[:file]   
 
     respond_to do |format|
+      #format.html { # index.html.erb
+      #  render ( { :text => (" asfsafsd " + @client.country.code + "\n aaa " + params.inspect.to_s)} )
+      #  return
+      #}
       if @client.save
         format.html { redirect_to @client, notice: 'Client was successfully created.' }
         format.json { render json: @client, status: :created, location: @client }
@@ -76,10 +89,15 @@ class ClientsController < ApplicationController
   # DELETE /clients/1.json
   def destroy
     @client = Client.find(params[:id])
-    @client.destroy
+    if(@client.destroy)
+      script = "$('#" + params[:id] + "').remove();"
+    else
+      script = "alert('Error on Delete');"
+    end
 
     respond_to do |format|
       format.html { redirect_to clients_url }
+      format.js { render js: script }
       format.json { head :no_content }
     end
   end

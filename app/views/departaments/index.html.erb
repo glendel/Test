@@ -1,0 +1,16 @@
+<h1>Listing departaments</h1>
+
+<label for="fil_text">Search:</label>&nbsp;
+<input type="text" id="fil_text" name="fil_text" size="40" placeholder="name" 
+       onkeyup="updateLists( '#departament-list', '<%= departaments_path( { :format => :html } ) -%>', { remote : true, dataType : 'html', data : { filter: this.value } } );" />
+
+<br/><br/>
+
+<div id="departament-list">
+  <%= render( {:partial => 'departaments'} ) -%>
+</div>
+
+  
+<br />
+
+<%= link_to 'New Departament', new_departament_path %>
